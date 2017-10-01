@@ -13,7 +13,7 @@ Nextbike is available through Carthage/Punic and Swift Package Manager, whatever
 github "kiliankoe/Nextbike"
 
 // Swift Package Manager
-.package(url: "https://github.com/kiliankoe/Nextbike, from: "check tags/releases for the current version")
+.package(url: "https://github.com/kiliankoe/Nextbike, from: "current version")
 ```
 
 ## Overview
