@@ -1,6 +1,6 @@
 # 🚲 Nextbike
 
-Minimal wrapper around the Nextbike API to enable listing of all places (e.g. bike racks) and their available bike counts.
+Minimal wrapper around the [Nextbike](https://www.nextbike.net) API to enable listing of all places (e.g. bike racks) and their available bike counts.
 
 Looking for more info on bike sharing APIs in general? Check here → [ubahnverleih/WoBike](https://github.com/ubahnverleih/WoBike).
 
