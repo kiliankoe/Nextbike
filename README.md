@@ -37,12 +37,14 @@ There's a lot more info in the Nextbike API response. Would be great to pull tha
 - Flexzone info
 - Proximity search
 - App functionality
+  - Login
+  - User Details
   - Notifications
   - Active Bookings
   - Open Rentals
-  - Login
-  - User Details
   - Rental History
+  - Bike rentals
+  - Bike returns
   - Find Station
   - Bike List at Station
   - Bikes available to book
