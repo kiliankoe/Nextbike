@@ -7,8 +7,22 @@ public struct Nextbike {
                             completion: @escaping (Result<[Country]>) -> Void) {
         let url = URL(string: "https://api.nextbike.net/maps/nextbike-live.json?city=\(cityID)")!
         let task = session.dataTask(with: url) { data, response, error in
-            guard error == nil, let data = data else { return }
-            guard let decoded = try? JSONDecoder().decode(Root.self, from: data) else { return }
+            guard error == nil,
+                  let data = data
+            else {
+                completion(Result(failure: error!))
+                return
+            }
+
+            let decoded: Root
+
+            do {
+                decoded = try JSONDecoder().decode(Root.self, from: data)
+            } catch {
+                completion(Result(failure: error))
+                return
+            }
+
             completion(Result(success: decoded.countries))
         }
         task.resume()
