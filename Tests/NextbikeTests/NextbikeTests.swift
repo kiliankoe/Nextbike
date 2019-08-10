@@ -5,8 +5,10 @@ class NextbikeTests: XCTestCase {
     func testLoadDresden() {
         let e = expectation(description: "get data")
 
+        let session = MockURLSession(withResponseFileName: "Response")
+
         let dresden = 2
-        Nextbike.load(cityWithID: dresden) { result in
+        Nextbike.load(cityWithID: dresden, session: session) { result in
             let countries = try! result.get()
 
             let de = countries[0]
