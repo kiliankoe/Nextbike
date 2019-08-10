@@ -1,5 +1,13 @@
 import Foundation
+
+#if canImport(CoreLocation)
 import struct CoreLocation.CLLocationCoordinate2D
+#else
+public struct CLLocationCoordinate2D: Decodable {
+    public let latitude: Double
+    public let longitude: Double
+}
+#endif
 
 public struct Nextbike {
     public static func load(cityWithID cityID: Int,
