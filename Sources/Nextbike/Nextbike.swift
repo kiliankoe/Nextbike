@@ -14,7 +14,7 @@ public struct Nextbike {
                             session: URLSession = .shared,
                             completion: @escaping (Result<[Country], Error>) -> Void) {
         let url = URL(string: "https://api.nextbike.net/maps/nextbike-live.json?city=\(cityID)")!
-        let task = session.dataTask(with: url) { data, response, error in
+        let task = session.dataTask(with: url) { data, _, error in
             guard error == nil,
                   let data = data
             else {
