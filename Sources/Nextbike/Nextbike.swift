@@ -4,13 +4,13 @@ import struct CoreLocation.CLLocationCoordinate2D
 public struct Nextbike {
     public static func load(cityWithID cityID: Int,
                             session: URLSession = .shared,
-                            completion: @escaping (Result<[Country]>) -> Void) {
+                            completion: @escaping (Result<[Country], Error>) -> Void) {
         let url = URL(string: "https://api.nextbike.net/maps/nextbike-live.json?city=\(cityID)")!
         let task = session.dataTask(with: url) { data, response, error in
             guard error == nil,
                   let data = data
             else {
-                completion(Result(failure: error!))
+                completion(.failure(error!))
                 return
             }
 
@@ -19,11 +19,11 @@ public struct Nextbike {
             do {
                 decoded = try JSONDecoder().decode(Root.self, from: data)
             } catch {
-                completion(Result(failure: error))
+                completion(.failure(error))
                 return
             }
 
-            completion(Result(success: decoded.countries))
+            completion(.success(decoded.countries))
         }
         task.resume()
     }
