@@ -32,9 +32,11 @@ class NextbikeTests: XCTestCase {
         let e = expectation(description: "find nearby bikes")
         
         Nextbike.findNearby(location: CLLocationCoordinate2D(latitude: 51.06298, longitude: 13.74609)) { result in
-            let places = try! result.get()
+            guard let places = try? result.get() else { return }
             
             XCTAssertGreaterThan(places.count, 0)
+            print(places.first?.name ?? "n/a")
+            print(places.first?.bikeCount ?? 0)
             
             e.fulfill()
         }

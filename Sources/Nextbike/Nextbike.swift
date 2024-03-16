@@ -89,14 +89,14 @@ public struct City: Decodable {
 public struct Place: Decodable {
     public let coordinate: CLLocationCoordinate2D
     public let name: String
-    public let station: Bool
+    public let isStation: Bool
     public let bikeCount: Int
 
     private enum CodingKeys: String, CodingKey {
         case lat
         case lng
         case name
-        case station = "spot"
+        case isStation = "spot"
         case bikeCount = "bikes"
     }
 
@@ -107,6 +107,6 @@ public struct Place: Decodable {
         self.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         self.name = try container.decode(String.self, forKey: .name)
         self.bikeCount = try container.decode(Int.self, forKey: .bikeCount)
-        self.station = try container.decode(Bool.self, forKey: .station)
+        self.isStation = try container.decode(Bool.self, forKey: .isStation)
     }
 }
