@@ -35,6 +35,36 @@ public struct Nextbike {
         }
         task.resume()
     }
+    
+    public static func findNearby(location: CLLocationCoordinate2D,
+                                  session: URLSession = .shared,
+                                  completion: @escaping (Result<[Place], Error>) -> Void) {
+        let url = URL(string: "https://api.nextbike.net/maps/nextbike-live.json?lat=\(location.latitude)&lng=\(location.longitude)")!
+        let task = session.dataTask(with: url) { data, _, error in
+            guard error == nil,
+                  let data = data
+            else {
+                completion(.failure(error!))
+                return
+            }
+
+            let decoded: Root
+
+            do {
+                decoded = try JSONDecoder().decode(Root.self, from: data)
+            } catch {
+                completion(.failure(error))
+                return
+            }
+
+            completion(.success(decoded.countries.flatMap({ country in
+                country.cities.flatMap { city in
+                    return city.places
+                }
+            })))
+        }
+        task.resume()
+    }
 }
 
 struct Root: Decodable {
@@ -59,12 +89,14 @@ public struct City: Decodable {
 public struct Place: Decodable {
     public let coordinate: CLLocationCoordinate2D
     public let name: String
+    public let station: Bool
     public let bikeCount: Int
 
     private enum CodingKeys: String, CodingKey {
         case lat
         case lng
         case name
+        case station = "spot"
         case bikeCount = "bikes"
     }
 
@@ -75,5 +107,6 @@ public struct Place: Decodable {
         self.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         self.name = try container.decode(String.self, forKey: .name)
         self.bikeCount = try container.decode(Int.self, forKey: .bikeCount)
+        self.station = try container.decode(Bool.self, forKey: .station)
     }
 }

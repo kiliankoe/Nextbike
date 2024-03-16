@@ -21,7 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		39C5EE291F812B94004E3111 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5EE281F812B94004E3111 /* Result.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_27 /* NextbikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NextbikeTests.swift */; };
 		OBJ_29 /* Nextbike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Nextbike::Nextbike::Product" /* Nextbike.framework */; };
@@ -46,7 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		39C5EE281F812B94004E3111 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		39C5EE2A1F812ECE004E3111 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		"Nextbike::Nextbike::Product" /* Nextbike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nextbike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Nextbike::NextbikeTests::Product" /* NextbikeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NextbikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Nextbike.swift */,
-				39C5EE281F812B94004E3111 /* Result.swift */,
 			);
 			name = Nextbike;
 			path = Sources/Nextbike;
@@ -192,6 +189,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = OBJ_5;
@@ -228,7 +226,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				39C5EE291F812B94004E3111 /* Result.swift in Sources */,
 				OBJ_36 /* Nextbike.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
