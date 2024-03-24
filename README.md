@@ -18,15 +18,20 @@ github "kiliankoe/Nextbike"
 
 ## Overview
 
-Load all bikes current available in Dresden (id: 2) and print the count at the place "Bf. Dresden-Neustadt".
+Load all bikes current available in Dresden (id: 685) and print the count at the place "Bf. Dresden-Neustadt".
 
 ```swift
 Nextbike.load(cityWithID: 2) { result in
-    guard let countries = result.success else { return }
+    guard let countries = try? result.get() else { return }
     let dresden = countries[0].cities[0]
-    let bhfNeustadt = dresden.places.first { $0.name == "Bf. Dresden-Neustadt" }!
+    let bhfNeustadt = dresden.places.first { $0.name == "MOBIpunkt Bahnhof Neustadt" }!
     print(bhfNeustadt.bikeCount)
 }
+
+Nextbike.findNearby(location: CLLocationCoordinate2D(latitude: 51.06298, longitude: 13.74609)) { result in
+    guard let places = try? result.get() else { return }
+    print(places.first?.name) // "Albertplatz"
+    print(places.first?.bikeCount) // 1
 ```
 
 ## ToDo
@@ -35,7 +40,7 @@ There's a lot more info in the Nextbike API response. Would be great to pull tha
 
 - Extend current "nextbike-live" model types
 - Flexzone info
-- Proximity search
+- Proximity search ✅
 - App functionality
   - Login
   - User Details

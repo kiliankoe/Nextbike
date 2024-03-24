@@ -1,3 +1,8 @@
 .DS_Store
 /.build
 /Packages
+Nextbike.xcodeproj/project.xcworkspace/xcuserdata/adrian.xcuserdatad/UserInterfaceState.xcuserstate
+Nextbike.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+Nextbike.xcodeproj/xcuserdata/adrian.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+Nextbike.xcodeproj/xcuserdata/adrian.xcuserdatad/xcschemes/xcschememanagement.plist
+.swiftpm/xcode/xcuserdata/adrian.xcuserdatad/xcschemes/xcschememanagement.plist
