@@ -91,6 +91,7 @@ public struct Place: Decodable {
     public let name: String
     public let isStation: Bool
     public let bikeCount: Int
+    public let bookedBikeCount: Int
 
     private enum CodingKeys: String, CodingKey {
         case lat
@@ -98,6 +99,7 @@ public struct Place: Decodable {
         case name
         case isStation = "spot"
         case bikeCount = "bikes"
+        case bookedBikeCount = "booked_bikes"
     }
 
     public init(from decoder: Decoder) throws {
@@ -108,5 +110,6 @@ public struct Place: Decodable {
         self.name = try container.decode(String.self, forKey: .name)
         self.bikeCount = try container.decode(Int.self, forKey: .bikeCount)
         self.isStation = try container.decode(Bool.self, forKey: .isStation)
+        self.bookedBikeCount = try container.decode(Int.self, forKey: .bookedBikeCount)
     }
 }
