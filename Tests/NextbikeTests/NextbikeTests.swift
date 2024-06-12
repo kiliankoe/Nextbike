@@ -3,11 +3,11 @@ import XCTest
 import CoreLocation
 
 class NextbikeTests: XCTestCase {
-    func testLoadDresden() {
-        let e = expectation(description: "get data")
-
+    func testFetchBikesForCity() {
+        let e = expectation(description: "get all bikes in dresden")
+        
         let dresden = 685
-        Nextbike.load(cityWithID: dresden) { result in
+        Nextbike.Maps.fetchBikesFor(cityWithID: dresden) { result in
             let countries = try! result.get()
 
             let de = countries[0]
@@ -28,10 +28,10 @@ class NextbikeTests: XCTestCase {
         waitForExpectations(timeout: 5)
     }
     
-    func testFindNearby() {
-        let e = expectation(description: "find nearby bikes")
+    func testFetchBikesForLocation() {
+        let e = expectation(description: "get bikes near the given location")
         
-        Nextbike.findNearby(location: CLLocationCoordinate2D(latitude: 51.06298, longitude: 13.74609)) { result in
+        Nextbike.Maps.fetchBikesFor(location: CLLocationCoordinate2D(latitude: 51.06298, longitude: 13.74609)) { result in
             guard let places = try? result.get() else { return }
             
             XCTAssertGreaterThan(places.count, 0)
@@ -43,9 +43,4 @@ class NextbikeTests: XCTestCase {
         
         waitForExpectations(timeout: 5)
     }
-
-    static var allTests = [
-        ("testLoadDresden", testLoadDresden),
-        ("testFindNearby", testFindNearby)
-    ]
 }
