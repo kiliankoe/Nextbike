@@ -3,6 +3,8 @@ import XCTest
 import CoreLocation
 
 class NextbikeTests: XCTestCase {
+    let apiKey = ProcessInfo.processInfo.environment["API_KEY"] ?? ""
+    
     func testFetchBikesForCity() {
         let e = expectation(description: "get all bikes in dresden")
         
@@ -40,6 +42,37 @@ class NextbikeTests: XCTestCase {
             
             e.fulfill()
         }
+        
+        waitForExpectations(timeout: 5)
+    }
+    
+    func testFlexzoneQuery() {
+        let e = expectation(description: "obtain all flexzones as GeoJSON")
+        
+        var hash = ""
+        Nextbike.Maps.flexzones(apiKey: apiKey, hash: "", domain: "dx") { result in
+            hash = (try? result.get().hash) ?? ""
+            
+            Nextbike.Maps.flexzones(apiKey: self.apiKey, hash: hash, domain: "dx") { result in
+                do {
+                    switch result {
+                    case .success(_):
+                        return
+                    case .failure(let failure):
+                        throw failure
+                    }
+                } catch let err as NetworkError {
+                    // this has to fail because when supplied with the correct hash,
+                    // the api should respond with 304 - Not Modified
+                    e.fulfill()
+                } catch {
+                    return
+                }
+            }
+            
+        }
+        
+        
         
         waitForExpectations(timeout: 5)
     }

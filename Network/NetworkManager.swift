@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case notSuccessful(Int, String)
+}
+
 final class NetworkManager {
     static let shared = NetworkManager()
     
@@ -26,15 +30,37 @@ final class NetworkManager {
             request.httpBody = body
         }
 
-        let task = session.dataTask(with: request) { data, _, error in
+        let task = session.dataTask(with: request) { data, response, error in
             guard error == nil, let data = data else {
                 completion(.failure(error!))
                 return
             }
             
+            if let httpResponse = (response as? HTTPURLResponse) {
+                if httpResponse.statusCode != 200 {
+                    let message = HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)
+                    completion(.failure(NetworkError.notSuccessful(httpResponse.statusCode, message)))
+                    return
+                }
+            }
+            
             do {
                 let decoded = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(decoded))
+            } catch let error as DecodingError {
+                   switch error {
+                            case .typeMismatch(let key, let value):
+                              print("error \(key), value \(value) and ERROR: \(error.localizedDescription)")
+                            case .valueNotFound(let key, let value):
+                              print("error \(key), value \(value) and ERROR: \(error.localizedDescription)")
+                            case .keyNotFound(let key, let value):
+                              print("error \(key), value \(value) and ERROR: \(error.localizedDescription)")
+                            case .dataCorrupted(let key):
+                              print("error \(key), and ERROR: \(error.localizedDescription)")
+                            default:
+                              print("ERROR: \(error.localizedDescription)")
+                            }
+                   
             } catch {
                 completion(.failure(error))
             }

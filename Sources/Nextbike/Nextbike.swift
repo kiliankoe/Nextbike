@@ -10,6 +10,10 @@ public struct CLLocationCoordinate2D: Decodable {
 #endif
 
 public struct Nextbike {
+    private struct Root: Decodable {
+        let countries: [Country]
+    }
+    
     @available(*, deprecated, renamed: "Nextbike.Maps.fetchBikesFor")
     public static func load(cityWithID cityID: Int,
                             session: URLSession = .shared,
