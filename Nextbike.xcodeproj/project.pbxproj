@@ -21,23 +21,15 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3AAB96692C1A378E00055CBB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB96682C1A378E00055CBB /* NetworkManager.swift */; };
-		3AAB966A2C1A378E00055CBB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB96682C1A378E00055CBB /* NetworkManager.swift */; };
-		3AAB966C2C1A37A400055CBB /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB966B2C1A37A400055CBB /* Endpoint.swift */; };
-		3AAB966D2C1A37A400055CBB /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB966B2C1A37A400055CBB /* Endpoint.swift */; };
-		3AAB96722C1A37FF00055CBB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB96712C1A37FF00055CBB /* Country.swift */; };
-		3AAB96732C1A37FF00055CBB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB96712C1A37FF00055CBB /* Country.swift */; };
-		3AAB96752C1A380E00055CBB /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB96742C1A380E00055CBB /* City.swift */; };
-		3AAB96762C1A380E00055CBB /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB96742C1A380E00055CBB /* City.swift */; };
-		3AAB96782C1A382300055CBB /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB96772C1A382300055CBB /* Place.swift */; };
-		3AAB96792C1A382300055CBB /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB96772C1A382300055CBB /* Place.swift */; };
-		3AAB967B2C1A39A700055CBB /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB967A2C1A39A700055CBB /* Maps.swift */; };
-		3AAB967C2C1A39A700055CBB /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB967A2C1A39A700055CBB /* Maps.swift */; };
-		3AAB967E2C1AF45100055CBB /* Bikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB967D2C1AF45100055CBB /* Bikes.swift */; };
-		3AAB967F2C1AF45100055CBB /* Bikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB967D2C1AF45100055CBB /* Bikes.swift */; };
 		3AAB96822C1B071600055CBB /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 3AAB96812C1B071600055CBB /* AnyCodable */; };
-		3AAB96842C1B0C9700055CBB /* FlexzoneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB96832C1B0C9700055CBB /* FlexzoneResponse.swift */; };
-		3AAB96852C1B0C9700055CBB /* FlexzoneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB96832C1B0C9700055CBB /* FlexzoneResponse.swift */; };
+		3AFD08AA2C1B16E600DEC19A /* Bikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD089F2C1B16E600DEC19A /* Bikes.swift */; };
+		3AFD08AB2C1B16E600DEC19A /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A02C1B16E600DEC19A /* Maps.swift */; };
+		3AFD08AC2C1B16E600DEC19A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A22C1B16E600DEC19A /* City.swift */; };
+		3AFD08AD2C1B16E600DEC19A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A32C1B16E600DEC19A /* Country.swift */; };
+		3AFD08AE2C1B16E600DEC19A /* FlexzoneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A42C1B16E600DEC19A /* FlexzoneResponse.swift */; };
+		3AFD08AF2C1B16E600DEC19A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A52C1B16E600DEC19A /* Place.swift */; };
+		3AFD08B02C1B16E600DEC19A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A72C1B16E600DEC19A /* Endpoint.swift */; };
+		3AFD08B12C1B16E600DEC19A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A82C1B16E600DEC19A /* NetworkManager.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_27 /* NextbikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NextbikeTests.swift */; };
 		OBJ_29 /* Nextbike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Nextbike::Nextbike::Product" /* Nextbike.framework */; };
@@ -63,14 +55,14 @@
 
 /* Begin PBXFileReference section */
 		39C5EE2A1F812ECE004E3111 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		3AAB96682C1A378E00055CBB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		3AAB966B2C1A37A400055CBB /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		3AAB96712C1A37FF00055CBB /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		3AAB96742C1A380E00055CBB /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
-		3AAB96772C1A382300055CBB /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
-		3AAB967A2C1A39A700055CBB /* Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
-		3AAB967D2C1AF45100055CBB /* Bikes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bikes.swift; sourceTree = "<group>"; };
-		3AAB96832C1B0C9700055CBB /* FlexzoneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexzoneResponse.swift; sourceTree = "<group>"; };
+		3AFD089F2C1B16E600DEC19A /* Bikes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bikes.swift; sourceTree = "<group>"; };
+		3AFD08A02C1B16E600DEC19A /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
+		3AFD08A22C1B16E600DEC19A /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		3AFD08A32C1B16E600DEC19A /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		3AFD08A42C1B16E600DEC19A /* FlexzoneResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexzoneResponse.swift; sourceTree = "<group>"; };
+		3AFD08A52C1B16E600DEC19A /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		3AFD08A72C1B16E600DEC19A /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		3AFD08A82C1B16E600DEC19A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		"Nextbike::Nextbike::Product" /* Nextbike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nextbike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Nextbike::NextbikeTests::Product" /* NextbikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = NextbikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* NextbikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextbikeTests.swift; sourceTree = "<group>"; };
@@ -98,36 +90,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3AAB96652C1A375A00055CBB /* Models */ = {
+		3AFD08A12C1B16E600DEC19A /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
-				3AAB96712C1A37FF00055CBB /* Country.swift */,
-				3AAB96742C1A380E00055CBB /* City.swift */,
-				3AAB96772C1A382300055CBB /* Place.swift */,
-				3AAB96832C1B0C9700055CBB /* FlexzoneResponse.swift */,
+				3AFD089F2C1B16E600DEC19A /* Bikes.swift */,
+				3AFD08A02C1B16E600DEC19A /* Maps.swift */,
 			);
-			name = Models;
-			path = ../../Models;
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
-		3AAB96662C1A375F00055CBB /* Network */ = {
+		3AFD08A62C1B16E600DEC19A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3AAB96682C1A378E00055CBB /* NetworkManager.swift */,
-				3AAB966B2C1A37A400055CBB /* Endpoint.swift */,
+				3AFD08A22C1B16E600DEC19A /* City.swift */,
+				3AFD08A32C1B16E600DEC19A /* Country.swift */,
+				3AFD08A42C1B16E600DEC19A /* FlexzoneResponse.swift */,
+				3AFD08A52C1B16E600DEC19A /* Place.swift */,
 			);
-			name = Network;
-			path = ../../Network;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		3AAB96672C1A376600055CBB /* Endpoints */ = {
+		3AFD08A92C1B16E600DEC19A /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				3AAB967A2C1A39A700055CBB /* Maps.swift */,
-				3AAB967D2C1AF45100055CBB /* Bikes.swift */,
+				3AFD08A72C1B16E600DEC19A /* Endpoint.swift */,
+				3AFD08A82C1B16E600DEC19A /* NetworkManager.swift */,
 			);
-			name = Endpoints;
-			path = ../../Endpoints;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
@@ -178,9 +167,9 @@
 		OBJ_8 /* Nextbike */ = {
 			isa = PBXGroup;
 			children = (
-				3AAB96672C1A376600055CBB /* Endpoints */,
-				3AAB96662C1A375F00055CBB /* Network */,
-				3AAB96652C1A375A00055CBB /* Models */,
+				3AFD08A12C1B16E600DEC19A /* Endpoints */,
+				3AFD08A62C1B16E600DEC19A /* Models */,
+				3AFD08A92C1B16E600DEC19A /* Network */,
 				OBJ_9 /* Nextbike.swift */,
 			);
 			name = Nextbike;
@@ -285,15 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				3AAB966A2C1A378E00055CBB /* NetworkManager.swift in Sources */,
-				3AAB96762C1A380E00055CBB /* City.swift in Sources */,
-				3AAB966C2C1A37A400055CBB /* Endpoint.swift in Sources */,
-				3AAB96722C1A37FF00055CBB /* Country.swift in Sources */,
-				3AAB96842C1B0C9700055CBB /* FlexzoneResponse.swift in Sources */,
-				3AAB96792C1A382300055CBB /* Place.swift in Sources */,
-				3AAB967B2C1A39A700055CBB /* Maps.swift in Sources */,
 				OBJ_21 /* Package.swift in Sources */,
-				3AAB967E2C1AF45100055CBB /* Bikes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,15 +290,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				3AAB96692C1A378E00055CBB /* NetworkManager.swift in Sources */,
-				3AAB96752C1A380E00055CBB /* City.swift in Sources */,
-				3AAB966D2C1A37A400055CBB /* Endpoint.swift in Sources */,
-				3AAB96732C1A37FF00055CBB /* Country.swift in Sources */,
-				3AAB96852C1B0C9700055CBB /* FlexzoneResponse.swift in Sources */,
-				3AAB96782C1A382300055CBB /* Place.swift in Sources */,
-				3AAB967C2C1A39A700055CBB /* Maps.swift in Sources */,
+				3AFD08B12C1B16E600DEC19A /* NetworkManager.swift in Sources */,
+				3AFD08AA2C1B16E600DEC19A /* Bikes.swift in Sources */,
+				3AFD08AE2C1B16E600DEC19A /* FlexzoneResponse.swift in Sources */,
+				3AFD08B02C1B16E600DEC19A /* Endpoint.swift in Sources */,
 				OBJ_36 /* Nextbike.swift in Sources */,
-				3AAB967F2C1AF45100055CBB /* Bikes.swift in Sources */,
+				3AFD08AC2C1B16E600DEC19A /* City.swift in Sources */,
+				3AFD08AD2C1B16E600DEC19A /* Country.swift in Sources */,
+				3AFD08AF2C1B16E600DEC19A /* Place.swift in Sources */,
+				3AFD08AB2C1B16E600DEC19A /* Maps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
