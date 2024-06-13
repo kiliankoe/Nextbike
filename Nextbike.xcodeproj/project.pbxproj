@@ -106,7 +106,8 @@
 				3AAB96772C1A382300055CBB /* Place.swift */,
 				3AAB96832C1B0C9700055CBB /* FlexzoneResponse.swift */,
 			);
-			path = Models;
+			name = Models;
+			path = ../../Models;
 			sourceTree = "<group>";
 		};
 		3AAB96662C1A375F00055CBB /* Network */ = {
@@ -115,7 +116,8 @@
 				3AAB96682C1A378E00055CBB /* NetworkManager.swift */,
 				3AAB966B2C1A37A400055CBB /* Endpoint.swift */,
 			);
-			path = Network;
+			name = Network;
+			path = ../../Network;
 			sourceTree = "<group>";
 		};
 		3AAB96672C1A376600055CBB /* Endpoints */ = {
@@ -124,7 +126,8 @@
 				3AAB967A2C1A39A700055CBB /* Maps.swift */,
 				3AAB967D2C1AF45100055CBB /* Bikes.swift */,
 			);
-			path = Endpoints;
+			name = Endpoints;
+			path = ../../Endpoints;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
@@ -167,9 +170,6 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3AAB96672C1A376600055CBB /* Endpoints */,
-				3AAB96662C1A375F00055CBB /* Network */,
-				3AAB96652C1A375A00055CBB /* Models */,
 				OBJ_8 /* Nextbike */,
 			);
 			name = Sources;
@@ -178,6 +178,9 @@
 		OBJ_8 /* Nextbike */ = {
 			isa = PBXGroup;
 			children = (
+				3AAB96672C1A376600055CBB /* Endpoints */,
+				3AAB96662C1A375F00055CBB /* Network */,
+				3AAB96652C1A375A00055CBB /* Models */,
 				OBJ_9 /* Nextbike.swift */,
 			);
 			name = Nextbike;
