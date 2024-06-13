@@ -10,8 +10,8 @@ import MapKit
 import AnyCodable
 
 public struct FlexzoneResponse: Decodable {
-    let hash: String
-    let geojson: [MKGeoJSONObject]
+    public let hash: String
+    public let geojson: [MKGeoJSONObject]
     
     private enum CodingKeys: String, CodingKey {
         case hash
@@ -29,4 +29,17 @@ public struct FlexzoneResponse: Decodable {
         // Decode the Data into an array of MKGeoJSONObject
         geojson = try MKGeoJSONDecoder().decode(nodeValueData)
     }
+}
+
+
+/// used for storing information about a flexzone inside the geojson
+public struct FlexzoneInfo: Decodable {
+    public let color: String
+    public let fill: String
+    public let name: String
+    public let domain: String
+    public let cityId: String
+    public let category: String
+    public let serviceCases: [String]
+    public let flexzoneId: String
 }
