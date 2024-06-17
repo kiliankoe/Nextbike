@@ -10,6 +10,11 @@ public struct CLLocationCoordinate2D: Decodable {
 #endif
 
 public struct Nextbike {
+    private struct Root: Decodable {
+        let countries: [Country]
+    }
+    
+    @available(*, deprecated, renamed: "Nextbike.Maps.fetchBikesFor")
     public static func load(cityWithID cityID: Int,
                             session: URLSession = .shared,
                             completion: @escaping (Result<[Country], Error>) -> Void) {
@@ -36,6 +41,7 @@ public struct Nextbike {
         task.resume()
     }
     
+    @available(*, deprecated, renamed: "Nextbike.Maps.fetchBikesFor")
     public static func findNearby(location: CLLocationCoordinate2D,
                                   session: URLSession = .shared,
                                   completion: @escaping (Result<[Place], Error>) -> Void) {
@@ -64,49 +70,5 @@ public struct Nextbike {
             })))
         }
         task.resume()
-    }
-}
-
-struct Root: Decodable {
-    let countries: [Country]
-}
-
-public struct Country: Decodable {
-    public let name: String
-    public let cities: [City]
-
-    private enum CodingKeys: String, CodingKey {
-        case name = "country_name"
-        case cities
-    }
-}
-
-public struct City: Decodable {
-    public let name: String
-    public let places: [Place]
-}
-
-public struct Place: Decodable {
-    public let coordinate: CLLocationCoordinate2D
-    public let name: String
-    public let isStation: Bool
-    public let bikeCount: Int
-
-    private enum CodingKeys: String, CodingKey {
-        case lat
-        case lng
-        case name
-        case isStation = "spot"
-        case bikeCount = "bikes"
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let lat = try container.decode(Double.self, forKey: .lat)
-        let lng = try container.decode(Double.self, forKey: .lng)
-        self.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.bikeCount = try container.decode(Int.self, forKey: .bikeCount)
-        self.isStation = try container.decode(Bool.self, forKey: .isStation)
     }
 }

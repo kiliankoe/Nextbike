@@ -3,25 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		"Nextbike::NextbikePackageTests::ProductTarget" /* NextbikePackageTests */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_39 /* Build configuration list for PBXAggregateTarget "NextbikePackageTests" */;
-			buildPhases = (
-			);
-			dependencies = (
-				OBJ_42 /* PBXTargetDependency */,
-			);
-			name = NextbikePackageTests;
-			productName = NextbikePackageTests;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		3AAB96822C1B071600055CBB /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 3AAB96812C1B071600055CBB /* AnyCodable */; };
+		3AFD08AA2C1B16E600DEC19A /* Bikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD089F2C1B16E600DEC19A /* Bikes.swift */; };
+		3AFD08AB2C1B16E600DEC19A /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A02C1B16E600DEC19A /* Maps.swift */; };
+		3AFD08AC2C1B16E600DEC19A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A22C1B16E600DEC19A /* City.swift */; };
+		3AFD08AD2C1B16E600DEC19A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A32C1B16E600DEC19A /* Country.swift */; };
+		3AFD08AE2C1B16E600DEC19A /* FlexzoneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A42C1B16E600DEC19A /* FlexzoneResponse.swift */; };
+		3AFD08AF2C1B16E600DEC19A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A52C1B16E600DEC19A /* Place.swift */; };
+		3AFD08B02C1B16E600DEC19A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A72C1B16E600DEC19A /* Endpoint.swift */; };
+		3AFD08B12C1B16E600DEC19A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD08A82C1B16E600DEC19A /* NetworkManager.swift */; };
 		OBJ_27 /* NextbikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NextbikeTests.swift */; };
 		OBJ_29 /* Nextbike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Nextbike::Nextbike::Product" /* Nextbike.framework */; };
 		OBJ_36 /* Nextbike.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Nextbike.swift */; };
@@ -35,17 +29,18 @@
 			remoteGlobalIDString = "Nextbike::Nextbike";
 			remoteInfo = Nextbike;
 		};
-		39C5EE251F8120EB004E3111 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Nextbike::NextbikeTests";
-			remoteInfo = NextbikeTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		39C5EE2A1F812ECE004E3111 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3AFD089F2C1B16E600DEC19A /* Bikes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bikes.swift; sourceTree = "<group>"; };
+		3AFD08A02C1B16E600DEC19A /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
+		3AFD08A22C1B16E600DEC19A /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		3AFD08A32C1B16E600DEC19A /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		3AFD08A42C1B16E600DEC19A /* FlexzoneResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexzoneResponse.swift; sourceTree = "<group>"; };
+		3AFD08A52C1B16E600DEC19A /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		3AFD08A72C1B16E600DEC19A /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		3AFD08A82C1B16E600DEC19A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		"Nextbike::Nextbike::Product" /* Nextbike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nextbike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Nextbike::NextbikeTests::Product" /* NextbikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = NextbikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* NextbikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextbikeTests.swift; sourceTree = "<group>"; };
@@ -66,12 +61,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				3AAB96822C1B071600055CBB /* AnyCodable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AFD08A12C1B16E600DEC19A /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				3AFD089F2C1B16E600DEC19A /* Bikes.swift */,
+				3AFD08A02C1B16E600DEC19A /* Maps.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		3AFD08A62C1B16E600DEC19A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3AFD08A22C1B16E600DEC19A /* City.swift */,
+				3AFD08A32C1B16E600DEC19A /* Country.swift */,
+				3AFD08A42C1B16E600DEC19A /* FlexzoneResponse.swift */,
+				3AFD08A52C1B16E600DEC19A /* Place.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3AFD08A92C1B16E600DEC19A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3AFD08A72C1B16E600DEC19A /* Endpoint.swift */,
+				3AFD08A82C1B16E600DEC19A /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +145,9 @@
 		OBJ_8 /* Nextbike */ = {
 			isa = PBXGroup;
 			children = (
+				3AFD08A12C1B16E600DEC19A /* Endpoints */,
+				3AFD08A62C1B16E600DEC19A /* Models */,
+				3AFD08A92C1B16E600DEC19A /* Network */,
 				OBJ_9 /* Nextbike.swift */,
 			);
 			name = Nextbike;
@@ -141,6 +169,9 @@
 			dependencies = (
 			);
 			name = Nextbike;
+			packageProductDependencies = (
+				3AAB96812C1B071600055CBB /* AnyCodable */,
+			);
 			productName = Nextbike;
 			productReference = "Nextbike::Nextbike::Product" /* Nextbike.framework */;
 			productType = "com.apple.product-type.framework";
@@ -161,20 +192,6 @@
 			productName = NextbikeTests;
 			productReference = "Nextbike::NextbikeTests::Product" /* NextbikeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		"Nextbike::SwiftPMPackageDescription" /* NextbikePackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_17 /* Build configuration list for PBXNativeTarget "NextbikePackageDescription" */;
-			buildPhases = (
-				OBJ_20 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NextbikePackageDescription;
-			productName = NextbikePackageDescription;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -201,27 +218,20 @@
 				en,
 			);
 			mainGroup = OBJ_5;
+			packageReferences = (
+				3AAB96802C1B071600055CBB /* XCRemoteSwiftPackageReference "AnyCodable" */,
+			);
 			productRefGroup = OBJ_13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"Nextbike::SwiftPMPackageDescription" /* NextbikePackageDescription */,
 				"Nextbike::NextbikeTests" /* NextbikeTests */,
 				"Nextbike::Nextbike" /* Nextbike */,
-				"Nextbike::NextbikePackageTests::ProductTarget" /* NextbikePackageTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_21 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		OBJ_26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -234,7 +244,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				3AFD08B12C1B16E600DEC19A /* NetworkManager.swift in Sources */,
+				3AFD08AA2C1B16E600DEC19A /* Bikes.swift in Sources */,
+				3AFD08AE2C1B16E600DEC19A /* FlexzoneResponse.swift in Sources */,
+				3AFD08B02C1B16E600DEC19A /* Endpoint.swift in Sources */,
 				OBJ_36 /* Nextbike.swift in Sources */,
+				3AFD08AC2C1B16E600DEC19A /* City.swift in Sources */,
+				3AFD08AD2C1B16E600DEC19A /* Country.swift in Sources */,
+				3AFD08AF2C1B16E600DEC19A /* Place.swift in Sources */,
+				3AFD08AB2C1B16E600DEC19A /* Maps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,34 +264,9 @@
 			target = "Nextbike::Nextbike" /* Nextbike */;
 			targetProxy = 39C5EE241F8120EA004E3111 /* PBXContainerItemProxy */;
 		};
-		OBJ_42 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Nextbike::NextbikeTests" /* NextbikeTests */;
-			targetProxy = 39C5EE251F8120EB004E3111 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_18 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_19 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 		OBJ_24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -284,8 +277,11 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Nextbike.xcodeproj/NextbikeTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
@@ -303,8 +299,11 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Nextbike.xcodeproj/NextbikeTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
@@ -322,7 +321,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -344,9 +344,9 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Nextbike.xcodeproj/Nextbike_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Nextbike;
@@ -373,9 +373,9 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Nextbike.xcodeproj/Nextbike_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Nextbike;
@@ -401,41 +401,22 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_OPTIMIZATION_LEVEL = s;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				USE_HEADERMAP = NO;
-			};
-			name = Release;
-		};
-		OBJ_40 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_17 /* Build configuration list for PBXNativeTarget "NextbikePackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_18 /* Debug */,
-				OBJ_19 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
 		OBJ_2 /* Build configuration list for PBXProject "Nextbike" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -463,16 +444,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_39 /* Build configuration list for PBXAggregateTarget "NextbikePackageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_40 /* Debug */,
-				OBJ_41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3AAB96802C1B071600055CBB /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flight-School/AnyCodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3AAB96812C1B071600055CBB /* AnyCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AAB96802C1B071600055CBB /* XCRemoteSwiftPackageReference "AnyCodable" */;
+			productName = AnyCodable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }
