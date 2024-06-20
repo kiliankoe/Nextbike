@@ -37,11 +37,34 @@ extension Nextbike {
             })
         }
         
+        public static func fetchBikesFor(domains: [String],
+                                         limit: Int? = nil,
+                                         session: URLSession = .shared,
+                                         completion: @escaping (Result<[Country], Error>) -> Void) {
+            var queryItems = [
+                URLQueryItem(name: "domains", value: "\(domains.joined(separator: ","))"),
+                
+            ]
+            if let l = limit {
+                queryItems.append(URLQueryItem(name: "limit", value: "\(l)"))
+            }
+            
+            let endpoint = Endpoint(path: "/maps/nextbike-live.json", queryItems: queryItems)
+            NetworkManager.shared.request(endpoint, session: session, completion: { (result: Result<Root, Error>) in
+                switch result {
+                case .success(let root):
+                    completion(.success(root.countries))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            })
+        }
+        
         public static func fetchBikesFor(location: CLLocationCoordinate2D,
                                          limit: Int = 100,
                                          distance: Int = 2000,
                                          session: URLSession = .shared,
-                                         completion: @escaping (Result<[Place], Error>) -> Void) {
+                                         completion: @escaping (Result<[Country], Error>) -> Void) {
             let queryItems = [
                 URLQueryItem(name: "lat", value: "\(location.latitude)"),
                 URLQueryItem(name: "lng", value: "\(location.longitude)"),
@@ -52,12 +75,7 @@ extension Nextbike {
             NetworkManager.shared.request(endpoint, session: session) { (result: Result<Root, Error>) in
                 switch result {
                 case .success(let root):
-                    let places = root.countries.flatMap { country in
-                        country.cities.flatMap { city in
-                            return city.places
-                        }
-                    }
-                    completion(.success(places))
+                    completion(.success(root.countries))
                 case .failure(let error):
                     completion(.failure(error))
                 }
