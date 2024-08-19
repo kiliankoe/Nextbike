@@ -4,6 +4,8 @@ Minimal wrapper around the [Nextbike](https://www.nextbike.net) API to enable li
 
 Looking for more info on bike sharing APIs in general? Check here → [ubahnverleih/WoBike](https://github.com/ubahnverleih/WoBike).
 
+There are somewhat offical api documentations from Nextbike which can be found [here](https://api.nextbike.net/api/doc.php?mode=classic-maas) and [here](https://api.nextbike.net/api/doc.php?mode=classic-regular)
+
 ## Installation
 
 Nextbike is available through Carthage/Punic and Swift Package Manager, whatever floats your boat.
